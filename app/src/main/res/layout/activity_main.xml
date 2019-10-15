@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_main"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#0b222c"
+    android:padding="0dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        />
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/iv_slider"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:minHeight="180dp"
+        android:layout_alignStart="@id/toolbar"
+        android:layout_alignEnd="@id/toolbar"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderCircularHandlerEnabled="true"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorGravity="center_horizontal | bottom"
+        app:sliderIndicatorMargin="10dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="1.5dp"
+        app:sliderIndicatorRadius="1dp"
+        app:sliderIndicatorSelectedColor="#FFF"
+        app:sliderIndicatorUnselectedColor="#5A5A5A"
+        app:sliderScrollTimeInSec="4"
+        app:sliderStartAutoCycle="true" />
+
+    <TextView
+        android:id="@+id/tv_browse"
+        android:layout_below="@id/iv_slider"
+        android:layout_width="match_parent"
+        android:text="DISCOUNT LIST"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:id="@+id/rv_main"
+        android:layout_below="@id/tv_browse"
+        tools:listitem="@layout/item_row_game"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Summer Sale</string>
+    <string name="game_detail">Game Detail</string>
+    <string name="game_name">Game Name</string>
+    <string name="menu_main_list">List</string>
+    <string name="menu_main_grid">Grid</string>
+    <string name="menu_main_cardview">with CardView</string>
+    <string name="menu_main_about">About</string>
+
+    <string-array name="game_title">
+        <item>Tekken 7</item>
+        <item>Dota 2</item>
+        <item>CSGO</item>
+        <item>Warframe</item>
+        <item>Player Unknown\'s Battleground</item>
+        <item>GTA V</item>
+        <item>Destiny 2</item>
+        <item>Monster Hunter: World</item>
+        <item>No Mans Sky</item>
+        <item>Football Manager 2020</item>
+        <item>Rainbow Six Siege</item>
+        <item>Cyberpunk 2077</item>
+        <item>NBA 2K20</item>
+        <item>Rocket League</item>
+    </string-array>
+
+    <string-array name="game_imagelink">
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/389730/header.jpg</item>
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/570/header.jpg</item>
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/730/header.jpg</item>
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/230410/header.jpg</item>
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/578080/header.jpg</item>
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/271590/header.jpg</item>
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/1085660/header.jpg</item>
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/582010/header.jpg</item>
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/275850/header.jpg</item>
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/1100600/header.jpg</item>
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/359550/header.jpg</item>
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/1091500/header.jpg</item>
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/1089350/header.jpg</item>
+        <item>https://steamcdn-a.akamaihd.net/steam/apps/252950/header.jpg</item>
+    </string-array>
+
+    <string-array name="game_detail">
+        <item>Fighting</item>
+        <item>MOBA</item>
+        <item>FPS</item>
+        <item>RTS</item>
+        <item>TPS</item>
+        <item>Action</item>
+        <item>FPS</item>
+        <item>RPG</item>
+        <item>Open World</item>
+        <item>Simulation</item>
+        <item>FPS</item>
+        <item>Action</item>
+        <item>Sports</item>
+        <item>Soccer</item>
+    </string-array>
+
+    <string-array name="game_discount">
+        <item>70</item>
+        <item>50</item>
+        <item>45</item>
+        <item>30</item>
+        <item>20</item>
+        <item>10</item>
+        <item>19</item>
+        <item>5</item>
+        <item>33</item>
+        <item>40</item>
+        <item>11</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+    </string-array>
+
+</resources>
