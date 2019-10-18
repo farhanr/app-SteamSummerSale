@@ -81,12 +81,10 @@ public class ImageSliderAdapter extends SliderViewAdapter<ImageSliderAdapter.Sli
     public class SliderAdapterViewHolder extends SliderViewAdapter.ViewHolder{
         ImageView imageView;
         View itemView;
-        //TextView textView;
         public SliderAdapterViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.iv_slider_photo);
             this.itemView = itemView;
-            //textView = itemView.findViewById(R.id.iv_slider);
         }
     }
 }

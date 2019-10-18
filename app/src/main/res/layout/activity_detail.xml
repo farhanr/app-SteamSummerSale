@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetailActivity"
+    android:background="@color/primaryDarkColor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_detail"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        />
+
+    <FrameLayout
+
+        android:id="@+id/fl_detail_item"
+        android:layout_below="@id/tb_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tb_detail"
+        android:layout_alignEnd="@id/tb_detail">
+
+        <ImageView
+            android:id="@+id/iv_detail_head"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:minHeight="210dp"
+            android:src="@drawable/img_header_placeholder"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:background="@drawable/gradient_alpha"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_detail_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fl_detail_item"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_detail_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="left"
+            android:textColor="#f1f1f1"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_detail_release"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="left"
+            android:layout_below="@id/tv_detail_description"
+            android:textColor="#f1f1f1"
+            android:padding="10dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_detail_genre"
+        android:layout_below="@+id/rl_detail_item"
+        android:layout_width="wrap_content"
+        android:text="FPS"
+        android:textColor="@color/primaryDarkColor"
+        android:background="#f1f1f1"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"/>
+</RelativeLayout>

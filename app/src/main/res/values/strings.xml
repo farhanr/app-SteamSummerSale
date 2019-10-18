@@ -43,16 +43,16 @@
 
     <string-array name="game_detail">
         <item>Fighting</item>
-        <item>MOBA</item>
-        <item>FPS</item>
-        <item>RTS</item>
-        <item>TPS</item>
+        <item>Multiplayer Online Battle Arena</item>
+        <item>First Person Shooter</item>
+        <item>Real Time Strategy</item>
+        <item>Third Person Shooter</item>
         <item>Action</item>
-        <item>FPS</item>
-        <item>RPG</item>
+        <item>First Person Shooter</item>
+        <item>Role Playing Game</item>
         <item>Open World</item>
         <item>Simulation</item>
-        <item>FPS</item>
+        <item>First Person Shooter</item>
         <item>Action</item>
         <item>Sports</item>
         <item>Soccer</item>
@@ -71,8 +71,42 @@
         <item>40</item>
         <item>11</item>
         <item>10</item>
-        <item>20</item>
         <item>30</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="game_desc">
+        <item>Discover the epic conclusion of the long-time clan warfare between members of the Mishima family. Powered by Unreal Engine 4, the legendary fighting game franchise fights back with stunning story-driven cinematic battles and intense duels that can be enjoyed with friends and rivals.</item>
+        <item>Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it\'s their 10th hour of play or 1,000th, there\'s always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own.</item>
+        <item>Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game modes, and delivers updated versions of the classic CS content (de_dust2, etc.).</item>
+        <item>Warframe is a cooperative free-to-play third person online action game set in an evolving sci-fi world.</item>
+        <item>PLAYERUNKNOWN\'S BATTLEGROUNDS is a battle royale shooter that pits 100 players against each other in a struggle for survival. Gather supplies and outwit your opponents to become the last person standing.</item>
+        <item>When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can...</item>
+        <item>Dive into the free-to-play world of Destiny 2 to experience responsive FPS combat, explore the mysteries of our solar system, and unleash elemental abilities against powerful enemies. Download today to create your Guardian and collect weapons and armor to customize your playstyle.</item>
+        <item>Welcome to a new world! In Monster Hunter: World, the latest installment in the series, you can enjoy the ultimate hunting experience, using everything at your disposal to hunt monsters in a new world teeming with surprises and excitement.</item>
+        <item>No Man\'s Sky is a game about exploration and survival in an infinite procedurally generated universe.</item>
+        <item>Run your football club, your way. Every decision counts in Football Manager 2020 with new features and polished game mechanics rewarding planning and progression like never before, empowering managers to develop and refine both your club’s and your own unique identity.</item>
+        <item>Tom Clancy\'s Rainbow Six Siege is the latest installment of the acclaimed first-person shooter franchise developed by the renowned Ubisoft Montreal studio.</item>
+        <item>Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.</item>
+        <item>2K continues to redefine what’s possible in sports gaming with NBA 2K20, featuring best in class graphics &amp; gameplay, ground breaking game modes, and unparalleled player control and customization.</item>
+        <item>Rocket League is a high-powered hybrid of arcade-style soccer and vehicular mayhem with easy-to-understand controls and fluid, physics-driven competition. </item>
+    </string-array>
+
+    <string-array name="game_release">
+        <item>2 Jun, 2017</item>
+        <item>9 Jul, 2013</item>
+        <item>22 Aug, 2012</item>
+        <item>26 Mar, 2013</item>
+        <item>21 Dec, 2017</item>
+        <item>14 Apr, 2015</item>
+        <item>1 Oct, 2019</item>
+        <item>13 Aug, 2016</item>
+        <item>19 Nov, 2019</item>
+        <item>2 Dec, 2015</item>
+        <item>16 Apr, 2020</item>
+        <item>5 Sep, 2019</item>
+        <item>8 May, 2016</item>
+        <item>7 Jul, 2015</item>
     </string-array>
 
 </resources>

@@ -3,27 +3,18 @@ package fr.app.foxtrot.activity;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-//import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.widget.Toolbar;
-import androidx.cardview.widget.CardView;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
-
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
-import com.google.android.material.card.MaterialCardView;
 import com.smarteist.autoimageslider.SliderView;
-import com.smarteist.autoimageslider.SliderViewAdapter;
 
 import java.util.ArrayList;
 
@@ -33,14 +24,15 @@ import fr.app.foxtrot.adapter.ListGameAdapter;
 import fr.app.foxtrot.data.GameData;
 import fr.app.foxtrot.model.Game;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BaseActivity{
     private RecyclerView rvMain;
     private Toolbar toolbar;
-    private ImageView ivHeader;
     private SliderView sliderView;
-//    private MaterialCardView cardView;
     private ArrayList<Game> listGame = new ArrayList<>();
-    private Log log;
+    private ImageSliderAdapter imageSliderAdapter;
+    private GameData gameData;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,33 +40,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-//        ivHeader = findViewById(R.id.iv_head);
-//        Glide.with(this).
-//                load("https://boygeniusreport.files.wordpress.com/2018/06/screen-shot-2018-06-21-at-2-40-48-pm.png").
-//                apply(new RequestOptions()
-//                        .placeholder(R.drawable.img_header_placeholder)
-//                        .error(R.drawable.img_header_error)).
-//                into(ivHeader);
-
         sliderView = findViewById(R.id.iv_slider);
-        ImageSliderAdapter imageSliderAdapter = new ImageSliderAdapter(this);
-        sliderView.setSliderAdapter(imageSliderAdapter);
-
         rvMain = findViewById(R.id.rv_main);
-        rvMain.setHasFixedSize(true);
+        imageSliderAdapter = new ImageSliderAdapter(this);
 
-        GameData gameData = new GameData(this);
-        listGame.addAll(gameData.getListGame());
+        setUpToolbar();
+        setUpActivity();
         showRecyclerList();
-    }
-
-    private void showRecyclerList() {
-        rvMain.setLayoutManager(new GridLayoutManager(this,2));
-        //rvMain.setLayoutManager(new LinearLayoutManager(this));
-        ListGameAdapter listGameAdapter = new ListGameAdapter(listGame);
-        rvMain.setAdapter(listGameAdapter);
     }
 
     @Override
@@ -85,16 +57,32 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        setMode(item.getItemId());
+        switch (item.getItemId()){
+            case R.id.action_about:
+                Intent moveIntent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(moveIntent);
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
 
-    public void setMode(int selection){
-        switch (selection){
-            case R.id.action_cardview:
-                break;
-            case R.id.action_about:
-                break;
-        }
+    @Override
+    public void setUpActivity(){
+        sliderView.setSliderAdapter(imageSliderAdapter);
+        rvMain.setHasFixedSize(true);
+        gameData = new GameData(this);
+        listGame.addAll(gameData.getListGame());
+    }
+
+    @Override
+    public void setUpToolbar() {
+        setSupportActionBar(toolbar);
+    }
+
+    private void showRecyclerList() {
+        rvMain.setLayoutManager(new GridLayoutManager(this,2));
+        //rvMain.setLayoutManager(new LinearLayoutManager(this));
+        ListGameAdapter listGameAdapter = new ListGameAdapter(listGame, this);
+        rvMain.setAdapter(listGameAdapter);
     }
 }
